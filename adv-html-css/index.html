@@ -27,329 +27,45 @@
 
 <div class="slide">
   <h2>HTML5</h2>
-  <ul>
-    <li><p>Developer at thoughtbot</p></li>
-    <li><p>Consulting, Training and Products</p></li>
-    <li><p>Focus on Ruby, Rails, Javascript</p></li>
-    <li><p>Community and Open Source</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>This talk is about</h2>
-  <ul>
-    <li><p>What is Redis</p></li>
-    <li><p>Features</p></li>
-    <li><p>Data types</p></li>
-    <li><p>Operations</p></li>
-    <li><p>Use cases</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>What is Redis</h2>
-  <ul>
-    <li><p>Advanced key-value store, data structure server</p></li>
-    <li><p>Values go beyond simple strings</p></li>
-    <li><p>Single threaded</p></li>
-    <li><p>In-memory database, persists to disk</p></li>
-    <li><p>Server side operations and queries</p></li>
-    <li><p>Server side programmability with Lua</p></li>
-    <li><p>Open Source (BSD based license), received sponsorship from VMWare</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Persistance</h2>
-  <h3>Snapshotting</h3>
-  <ul>
-    <li><p>saves snapshots to disk (every 60 sec by default)</p></li>
-    <li><p><code>fork</code>, save, and replace file</p></li>
-    <li><p><code>save 30 2000</code>: dump to disk every 30 seconds if at least 2000 keys have changed</p></li>
-  </ul>
-  <h3>Append-only file</h3>
-  <ul>
-    <li><p>Changes are written to the AOF when data is modified, and is replayed when it starts</p></li>
-    <li><p>Turn on with <code>appendonly yes</code></p></li>
-    <li><p>Send <code>BGREWRITEAOF</code> to rebuild AOF with shortest possible sequence of commands, essentially compressing the AOF</p></li>
-    <li><p>Configurable <code>fsync</code> calls - always, every second, never (let the OS decide)</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Replication</h2>
-  <h3>Master slave built in</h3>
-  <ul>
-    <li><p>Master with multiple slaves. Slaves can connect to other slaves</p></li>
-    <li><p>How it works</p>
-      <ul>
-        <li><p>Slave sends a <code>SYNC</code> command to master</p></li>
-        <li><p>Master dumps current <strike>bacon</strike> state to slave in the background</p></li>
-        <li><p>Link is kept open and replays <strike>bacon bits</strike> commands there</p></li>
-      </ul>
-    </li>
-    <li><p>Very simple to configure: set <code>slaveof [ip address] [port]</code></p></li>
-  </ul>
-  <h3>Common uses</h3>
-  <ul>
-    <li><p>Failover</p></li>
-    <li><p>Offload read-heavy operations to slaves</p></li>
-    <li><p>Turn off save on master, let slaves save</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Redis data types</h2>
-  <ul>
-    <li>String</li>
-    <li>List</li>
-    <li>Set</li>
-    <li>Sorted Set</li>
-    <li>Hash</li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>A word about keys</h2>
-  <ul>
-    <li><em>Not</em> binary safe</li>
-    <li>Keep them short</li>
-    <li>Use <code>:</code> to namespace. For example, <code>user:1935:rating</code></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Strings</h2>
-  <ul>
-    <li><p>Most basic data type</p></li>
-    <li><p>Use <code>set</code> and <code>get</code></p></li>
-    <li><p><code>set user:1234:rating 29</code></p></li>
-    <li><p><code>get user:1234:rating</code></p></li>
-    <li><p>Numeric type? Atomic increments: <code>incr user:1234:pageviews</code>. you can also <code>incrby</code>, <code>decr</code> and <code>decrby</code></p></li>
-    <li><p>Set a new value, getting the old: <code>getset user:1234:rating 3</code></p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>String use cases</h2>
-  <h3>Disable application features</h3>
-    <p>Enable twitter integration</p>
-    <pre><code>inc features:twitter</code></pre>
-    <p>Application code checks for <code>features:twitter</code> before using feature</p>
-    <pre><code>if Feature.enabled?(:twitter)
-  # perform twitter integration
-end</code></pre>
-    <p>Auto remove <code>features:twitter</code> when related exception caught.</p>
-    <pre><code>begin
-  user.fetch_twitter_feed
-rescue
-  # del features:twitter
-end</code></pre>
-    <p>Ruby <code>rollout</code> gem supports other use cases</p>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Lists</h2>
-  <ul>
-    <li><p>Ordered sequence of elements (a linked list)</p></li>
-    <li><p>Add to the head in constant time. Retrieve from head in constant time. Slow to retrieve from middle.</p></li>
-    <li><p><code>lpush</code>, <code>rpush</code>, <code>lrange</code></p></li>
-  </ul>
-  <pre></code>rpush recipes:salad "Chop lettuce"
-rpush recipes:salad "Add smoked bacon bits"
-rpush recipes:salad "Sprinkle cheese"
-rpush recipes:salad "Add dijon mustard"
-lrange recipes:salad 0 3
-1) "Chop lettuce"
-2) "Add smoked bacon bits"
-3) "Sprinkle cheese"
-4) "Add dijon mustard"</code></pre>
-  <ul>
-    <li><p>More commonly, PKs from main data store will be stored in lists</p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>List operations</h2>
-  <ul>
-    <li><p>Get the length: <code>llen recipes:salad</code></p></li>
-    <li><p>Remove elements: <code>lrem recipes:salad 0 1</code></p></li>
-    <li><p>Operate on the left: <code>lpush</code>, <code>lpop</code>, <code>ltrim</code></p></li>
-    <li><p>Pop from the left, blocking: <code>blpop</code>
-    <li><p>Operate on the right: <code>rpush</code>, <code>rpop</code>, <code>rtrim</code></p></li>
-    <li><p>Pop from the right, blocking: <code>brpop</code>
-    <li><p>Grab a few elements: <code>lrange recipes:salad 0 -1</code>, or <code>rrange</code></p></li>
-    <li><p>Set a value by index:<code>lset recipes:salad 3 "Add more cheese"</code></p></li>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Lists use cases</h2>
-  <h3>Queues</h3>
-  <p>Got a new job? place it on the queue</p>
-  <pre><code>rpush queue:email.subscribed 632 #user id</code></pre>
-  <p>Spin up some workers, have them wait on the queue and do work</p>
-  <pre><code>blpop queue:email.subscribed
-SELECT * FROM users WHERE id = $1;
-send subscription email to user</code></pre>
-  <p>Take a look at <a href="https://github.com/defunkt/resque/">resque</a></p>
 </div>
 
 <div class="slide">
-  <h2>Sets</h2>
-  <ul>
-    <li><p>Unordered collections</p></li>
-    <li><p>Unique</p></li>
-    <li><p>Add and remove members, check for membership, intersect, union, difference</p></li>
-    <pre><code>sadd bacon_types "back"
-sadd bacon_types "cottage"
-sadd body_parts "back"
-sadd body_parts "neck"
-sismember body_parts "cottage"
-sinter bacon_types body_parts
-sinterstore best_bacon body_parts bacon_types
-smembers best_bacon
-1) "back"</code></pre>
-  </ul>
 </div>
 
 <div class="slide">
-  <h2>Set use cases</h2>
-  <h3>Tagging</h3>
-</div>
-
-<div class="slide">
-  <h2>Sorted Sets</h2>
-  <ul>
-    <li>Each member also has a score, used for ranking or indexing</li>
-    <li>What are the most visited pages on the site?</li>
-    <li>Which users have spent the most dollars?</li>
-    <li>Which products have been downloaded the most today?</li>
-</div>
-
-<div class="slide">
-  <h2>Sorted Set use cases</h2>
-  <h3>Git commits</h3>
-  <p>Which hackers have made most commits to PostgreSQL in the last twelve weeks?</p>
-  <pre><code>git shortlog -ns --since="12 weeks ago" | \
-awk '{ print "redis-cli zadd pgcommits " $1 " \""$2 " " $3"\"" }' | \
-sh
-redis-cli zrange pgcommits -5 -1
-1) "Heikki Linnakangas"
-2) "Robert Haas"
-3) "Peter Eisentraut"
-4) "Bruce Momjian"
-5) "Tom Lane"</code></pre>
-  <p>Which made more than 75 commits?</p>
-    <pre><code>redis-cli zrangebyscore pgcommits 75 inf
-1) "Bruce Momjian"
-2) "Tom Lane"</code></pre>
-</div>
-
-<div class="slide">
-  <h2>Sorted Set use cases</h2>
-  <h3>Real-time ranking</h3>
-  <ul>
-    <li>What are the most visited pages on the site?</li>
-    <li>Which users have spent the most dollars in the last hour?</li>
-    <li>Which products have been downloaded the most today?</li>
-  </ul>
-</div>
-
-<div class="slide">
-  <h2>Sorted Set use cases</h2>
-  <h3>Case study - downloads count on rubygems.org</h3>
-  
-</div>
-
-<div class="slide">
-  <h2>Hashes</h2>
-</div>
-
-<div class="slide">
-  <h2>Multi/Exec</h2>
-</div>
-
-<div class="slide">
-  <h2>Multi/Exec use case</h2>
-  <h3>Global errors on Airbrake</h3>
-  <p>Some errors are global and are grouped as such</p>
-  <p>User defines global errors and we store those on redis</p>
-  <pre><code>multi
-del project:135:globals
-sadd project:135:globals 'Database Connection Error'
-sadd project:135:globals 'External Service Error'
-exec</code></pre>
-  <p>When we receive a new exception, check against this set if it's global</p>
-<pre><code>sismember project:135:globals 'Database Connection Error' #true
-sismember project:135:globals 'Null Bacon Exception' # false</code></pre>
-</div>
-
-<div class="slide">
-  <h2>Expiration</h2>
-  <ul>
-    <li>Any key in Redis can be expired</li>
-    <li><p><code>SET key value</code></li>
-    <li><p><code>EXPIRE key 60</code> will expire the key</li>
-    <li><p><code>SETEXP key 60 value</code> equivalent of the two above commands in a transaction</li>
-    <li><p><code>PERSIST</code> removes expiration from a key</li>
-  </ul>
-</div>
-
-<div class="slide">
-  <h2>Expiration use case</h2>
-  <h3>Rate limiting</h3>
-  <p>Goal: Only allow MAX_ALLOWED API hits a minute per account</p>
-  <pre><code># project 123 hits your API
-if !(exists project:123:hits) {
-  (setex project:123:hits, 60, 0)
-}
-incr project:123:hits
-project:123:hits > MAX_ALLOWED
-</code></pre>
-</div>
-
-<div class="slide">
-  <h2>Real life usage</h2>
-  <ul>
-    <li><p>Rate limiting API usage</p></li>
-    <li><p>Track how many hits by user/account</p></li>
-    <li><p>User/account gets a key: <code>account:123:api.hits</code></p></li>
-    <li><p>When user hits endpoint:</p>
-    <ul>
-      <li><p>If key exists, increment. Then check if it's over the limit</p></li>
-      <li><p>If key does not exist, increment and <code>setex</code></p></li>
-    </ul>
-    </li>
-  </ul>
-</div>
-
-<div class="slide">
-  <h2>Pipelining</h2>
-</div>
-
-<div class="slide">
-  <h2>Pub/Sub</h2>
-</div>
-
-<div class="slide">
-  <h2>BONUS! Foreign data wrapper</h2>
-</div>
-
-<div class="slide">
-  <h2>We just scratched the surface</h2>
-  <ul>
-    <li><p>Many other commands available, go to <a href="http://redis.io">redis.io</a></p></li>
-    <li><p>Easily connect from <a href="https://github.com/antirez/hiredis">C</a>,
-              <a href="https://github.com/mrpi/redis-cplusplus-client">C++</a>,
-              <a href="https://github.com/xetorthio/jedis">Java</a>,
-              <a href="https://github.com/melo/perl-redis">Perl</a>,
-              <a href="https://github.com/andymccurdy/redis-py">Python</a>,
-              <a href="https://github.com/ezmobius/redis-rb">Ruby</a> and
-              <a href="http://redis.io/clients">more</a>.</p></li>
-    <li><p>Try redis now: <a href="http://try.redis-db.com/">try.redis-db.com</a></p></li>
-  </ul>
 </div>
 
   <script src="../deckjs/jquery.min.js"></script>
