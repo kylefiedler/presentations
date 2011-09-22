@@ -166,10 +166,11 @@
   </section>
 
   <!--workshop for marking up text-->
+  <!--markup gettysburg address-->
 
   <section class="slide">
     <h2>Forms</h2>
-    <p>Mimic js funtionality that have become design patterns online</p>
+    <p>Mimic js funtionality that&rsquo;s become design patterns online</p>
   </section>
 
   <section class="slide">
@@ -184,19 +185,24 @@
 
   <section class="slide">
     <h2>placeholder</h2>
-    <p></p>
+    <p>For placeholder text in inputs</p>
     <p class="slide"><code>&lt;input name=&quot;q&quot; placeholder=&quot;Search Bookmarks and History&quot;&gt;</code></p>
+
+    <form class="slide">
+      <input name="q" placeholder="Search Bookmarks and History">
+      <input type="submit" value="Search">
+    </form>
   </section>
 
   <section class="slide">
     <h2>autofocus</h2>
-    <p></p>
+    <p>Focuses input on page load</p>
     <p class="slide"><code>&lt;input name=&quot;q&quot; autofocus&gt;</code></p>
   </section>
 
   <section class="slide">
     <h2>required</h2>
-    <p></p>
+    <p>Makes input required</p>
     <p class="slide"><code>&lt;input id=&quot;q&quot; required&gt;</code></p>
   </section>
 
@@ -206,6 +212,7 @@
   </section>
 
   <!--workshop for forms-->
+  <!--Do markup for a designed form-->
 
   <section class="slide">
     <h2>CSS <a href="http://code.google.com/p/html5resetcss/">Reset</a></h2>
@@ -226,14 +233,31 @@
 
   <section class="slide">
     <h2>HTML structure &amp; semantics</h2>
+    <p>Avoid presentational markup (divitis), use what seems right and when in doubt look at the speck.</p>
   </section>
 
   <section class="slide">
     <h2>ID&rsquo;s &amp; Classes</h2>
-    <p>When to use which and naming.</p>
+    <p>Usage: Use as little as possible and default to classes</p>
+    <p>Naming: Describe what the content is not how it looks. Don&rsquo;t repeat names.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Do</h2>
+    <pre>
+      <code>
+      </code>
+    </pre>
+
+    <h2>Don&rsquo;t</h2>
+    <pre>
+      <code>
+      </code>
+    </pre>
   </section>
 
   <!--workshop for html-->
+  <!--refactor really bad markup-->
 
   <section class="slide title" id="sass">
     <h2>Sass</h2>
@@ -242,15 +266,20 @@
   <section class="slide">
     <h2>Setting it all up</h2>
     <p>Installing, and watching</p>
+
     <pre>
     <code>
       gem install sass
-      sass --watch style.scss:style.css
+      sass --watch sass_folder
     </code>
+    </pre>
+
+    <pre>
+      <code>sass --watch app/sass:public/stylesheets</code>
     </pre>
   </section>
 
-  <!--Pause so that everyone can set it up-->
+  <!--Get everyone set it up-->
 
   <section class="slide">
     <h2>Nesting</h2>
@@ -334,36 +363,14 @@
     <h2>application.scss</h2>
     <pre>
       <code>
-        @import "flutie";
-        @import "nivo";
+        @import "flutie/flutie";
+        @import "bourbon/bourbon";
 
+        @import "sass-variables";
+        @import "sass-extends";
         @import "base";
-        @import "forms";
-        @import "header";
-        @import "footer";
-        @import "index";
-        @import "community";
-        @import "contact";
-        @import "about";
-        @import "jobs";
-      </code>
-    </pre>
-  </section>
-
-  <section class="slide">
-    <h2>_base.scss</h2>
-    <pre>
-      <code>
-        /* Variables
-        ---------------------------------------- */
-        $header: proxima-nova-1, proxima-nova-2, "Helvetica Neue", Helvetica, sans-serif;
-        $body: "skolar-1","skolar-2", Georgia, serif;
-
-        $red: #AD141E; /*thoughtbot red*/
-
-        $lh: 20px; /*line-height of all the type on the site*/
-        $unit: 60px; /*one grid column*/
-        $gutter: 25px; /*size of one gutter*/
+        @import "layout";
+        @import --views--;
       </code>
     </pre>
   </section>
@@ -387,11 +394,6 @@
       </code>
 
       <code>
-        @import "flutie";
-        @import "nivo";
-
-        @import "base";
-        @import "forms";
         @import "header";
         @import "footer";
         @import "index";
@@ -399,6 +401,41 @@
         @import "contact";
         @import "about";
         @import "jobs";
+      </code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>_sass-variables.scss</h2>
+    <p>All variables for sass should be in this file. Make variables for fonts, colors, units, basic styles and more.</p>
+    <pre>
+      <code>
+        /* Variables
+        ---------------------------------------- */
+        $header: proxima-nova-1, proxima-nova-2, "Helvetica Neue", Helvetica, sans-serif;
+        $body: "skolar-1","skolar-2", Georgia, serif;
+
+        $red: #AD141E; /*thoughtbot red*/
+
+        $lh: 20px; /*line-height of all the type on the site*/
+        $unit: 60px; /*one grid column*/
+        $gutter: 25px; /*size of one gutter*/
+      </code>
+    </pre>
+  </section>
+
+    <section class="slide">
+    <h2>_sass-extends.scss</h2>
+    <pre>
+      <code>
+      </code>
+    </pre>
+  </section>
+
+    <section class="slide">
+    <h2>_base.scss</h2>
+    <pre>
+      <code>
       </code>
     </pre>
   </section>
@@ -419,12 +456,7 @@
     </pre>
   </section>
 
-<!--end of day 1-->
-
-  <section class="slide title">
-    <h2>CSS3 with Sass &amp; Bourbon</h2>
-  </section>
-
+  <!--workshop: set up bourbon-->
   <section class="slide">
   <h2>Setting up Bourbon</h2>
 
@@ -458,6 +490,16 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   </code></pre>
   </section>
 
+<!--end of day 1-->
+
+  <section class="slide title">
+    <h1>CSS3 with Sass &amp; Bourbon</h1>
+  </section>
+
+  <section class="slide">
+    <h1>General approch: progressive enhancement</h1>
+  </section>
+
   <section class="slide title">
     <h2>New attributes</h2>
   </section>
@@ -489,14 +531,6 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
         box-shadow: 0 1px 0 #fff;
       </code>
       <code class="slide">@include box-shadow(0 1px 0 #fff);</code>
-    </pre>
-  </section>
-
-  <section class="slide">
-    <h2><code>dispay: inline-block;</code></h2>
-    <pre>
-      <code class="slide">box-shadow: h-shadow v-shadow blur spread color inset;</code>
-      <code class="slide">@include inline-block;</code>
     </pre>
   </section>
 
@@ -575,35 +609,48 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   </section>
 
   <section class="slide">
-    <h2><code>empty</code></h2>
+    <h2><code>:empty</code></h2>
   </section>
 
   <section class="slide">
-    <h2><code>not</code></h2>
+    <h2><code>:not</code></h2>
   </section>
 
   <section class="slide">
-    <h2><code>target</code></h2>
+    <h2><code>:target</code></h2>
   </section>
 
   <section class="slide">
-    <h2><code>checked</code></h2>
+    <h2><code>:checked</code></h2>
   </section>
 
   <section class="slide">
-    <h2><code>enabled</code></h2>
+    <h2><code>:enabled</code></h2>
   </section>
 
   <section class="slide">
-    <h2><code>disabled</code></h2>
+    <h2><code>:disabled</code></h2>
   </section>
 
   <section class="slide title">
-    <h2>CSS Layout</h2>
+    <h1>CSS Layout</h1>
   </section>
 
   <section class="slide">
     <h2><code>grid-width</code></h2>
+    <p>Simple way to keep track the width </p>
+    <pre>
+      <code>
+        # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
+        $gw-column: 100px;          // Column Width
+        $gw-gutter: 40px;           // Gutter Width
+
+        div {
+          width: grid-width(4);     // returns 520px;
+          margin-left: $gw-gutter;  // returns 40px;
+        }
+      </code>
+    </pre>
   </section>
 
   <section class="slide">
@@ -611,7 +658,12 @@ sass --watch stylesheets/sass:stylesheets -r ./stylesheets/sass/bourbon/lib/bour
   </section>
 
   <section class="slide">
-    <h2><code>inline-block</code></h2>
+    <h2><code>dispay: inline-block;</code></h2>
+    <p>Element is placed inline but behaves as block</p>
+    <pre>
+      <code class="slide">box-shadow: h-shadow v-shadow blur spread color inset;</code>
+      <code class="slide">@include inline-block;</code>
+    </pre>
   </section>
 
   <section class="slide">
