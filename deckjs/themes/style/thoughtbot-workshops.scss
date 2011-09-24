@@ -1,26 +1,46 @@
-body, html {
-  background: #fff;
+// Variables
+//---------------------------------------- //
+$primary-font: "Proxima Nova", "Helvetica Neue", sans-serif;
+$highlight-color: #AD141E;
+$dominant-color: #222;
+$secondary-color: #fff;
+
+body.deck-container {
+  margin: 0;
+  padding: 0;
 }
+
 .deck-container {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: $primary-font;
   font-size:1.25em;
   background:#fff;
+  width: 100%;
+  margin: 0;
 
   .slide {
     background:#fff;
+
+    &.title {
+      background: $dominant-color;
+      color: #fff;
+
+      h1 {
+        color: $secondary-color;
+      }
+
+    }
   }
 
   h1 {
-    color:#000;
+    color: $highlight-color;
   }
 
   h2 {
-    color:#c00;
-    border-bottom-color:#ccc;
+    color: $dominant-color;
   }
 
   h3 {
-    color:#888;
+    color: lighten($dominant-color, 5%);
   }
 
   pre {
@@ -28,7 +48,11 @@ body, html {
   }
 
   code {
-    color:#888;
+    color: $dominant-color;
+
+    span {
+      color: $highlight-color;
+    }
   }
 
   blockquote {

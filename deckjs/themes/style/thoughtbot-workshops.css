@@ -1,23 +1,32 @@
-body, html {
-  background: #fff; }
+body.deck-container {
+  margin: 0;
+  padding: 0; }
 
 .deck-container {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
   font-size: 1.25em;
-  background: #fff; }
+  background: #fff;
+  width: 100%;
+  margin: 0; }
   .deck-container .slide {
     background: #fff; }
+    .deck-container .slide.title {
+      background: #222222;
+      color: #fff; }
+      .deck-container .slide.title h1 {
+        color: white; }
   .deck-container h1 {
-    color: #000; }
+    color: #ad141e; }
   .deck-container h2 {
-    color: #c00;
-    border-bottom-color: #ccc; }
+    color: #222222; }
   .deck-container h3 {
-    color: #888; }
+    color: #2f2f2f; }
   .deck-container pre {
     border-color: #ccc; }
   .deck-container code {
-    color: #888; }
+    color: #222222; }
+    .deck-container code span {
+      color: #ad141e; }
   .deck-container blockquote {
     font-size: 2em;
     font-style: italic;
