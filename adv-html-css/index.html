@@ -27,73 +27,69 @@
 
   <section class="slide" id="html-start">
     <h2>HTML5</h2>
+    <p>What doe&rsquo;s it mean? How did we get here?</p>
   </section>
 
   <section class="slide" id="doctype">
     <pre>
-    <code>
-      &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-      &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
-      &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
-    </code>
+<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</code>
     </pre>
   </section>
 
   <section class="slide" id="doctype-change">
     <pre>
-    <code>
-      &lt;!DOCTYPE html <span>PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
-      &lt;html <span>xmlns="http://www.w3.org/1999/xhtml"</span> lang="en" <span>xml:lang="en"</span>&gt;
-      &lt;meta <span>http-equiv="Content-Type" content="text/html;</span> charset=utf-8"&gt;
-    </code>
+<code>&lt;!DOCTYPE html <span>PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
+&lt;html <span>xmlns="http://www.w3.org/1999/xhtml"</span> lang="en" <span>xml:lang="en"</span>&gt;
+&lt;meta <span>http-equiv="Content-Type" content="text/html;</span> charset=utf-8"&gt;</code>
     </pre>
   </section>
 
   <section class="slide" id="doctype-change">
     <pre>
-    <code>
-      &lt;!DOCTYPE html&gt;
-      &lt;html lang="en"&gt;
-      &lt;meta charset=utf-8"&gt;
-    </code>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;meta charset=utf-8"&gt;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>&lt;a&gt;</code> can now contain block elements</h2>
-    <pre>
-      <code>
-        &lt;h1&gt;<span>&lt;a href="#"&gt;</span>Title&lt;/a&gt;&lt;/h1&gt;
-        &lt;p&gt;<span>&lt;a href="#"&gt;</span>&lt;img src=&quot;logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;<span>&lt;a href="#"&gt;</span>Text&lt;/a&gt;&lt;/p&gt;
-      </code>
+  </section>
 
-      <code class="slide">
-        <span>&lt;a href="#"&gt;</span>
-          &lt;h1&gt;Title&lt;/h1&gt;
-          &lt;p&gt;&lt;img src=&quot;logo.png&quot; /&gt;&lt;/p&gt;
-          &lt;p&gt;Text&lt;/p&gt;
-        &lt;/a&gt;
-      </code>
+  <section class="slide">
+    <pre>
+<code>&lt;h1&gt;<span>&lt;a href="#"&gt;</span>Title&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;<span>&lt;a href="#"&gt;</span>&lt;img src=&quot;logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;<span>&lt;a href="#"&gt;</span>Text&lt;/a&gt;&lt;/p&gt;
+</code>
+
+<code class="slide">
+<span>&lt;a href="#"&gt;</span>
+  &lt;h1&gt;Title&lt;/h1&gt;
+  &lt;p&gt;&lt;img src=&quot;logo.png&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;Text&lt;/p&gt;
+&lt;/a&gt;</code>
     </pre>
   </section>
 
   <section class="slide">
     <pre>
-      &lt;ol class=&quot;meetings&quot;&gt;
-      &lt;li&gt;
-        <span>&lt;a href=&quot;#&quot;&gt;</span>
-          &lt;h4&gt;August 2011 Meeting&lt;/h4&gt;
-          &lt;p&gt;August 2011 Meeting | &lt;span class=&quot;date&quot;&gt;2011-07-17 00:00:00 UTC — 2011-12-31 00:00:00 UTC&lt;/span&gt;&lt;/p&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        <span>&lt;a href=&quot;#&quot;&gt;</span>
-          &lt;h4&gt;Regional Trainer Meeting&lt;/h4&gt;
-          &lt;p&gt;Regional Trainer| &lt;span class=&quot;date&quot;&gt;2011-06-06 00:00:00 UTC — 2011-06-13 00:00:00 UTC&lt;/span&gt;&lt;/p&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
+<code>&lt;ol class=&quot;meetings&quot;&gt;
+&lt;li&gt;
+  <span>&lt;a href=&quot;#&quot;&gt;</span>
+    &lt;h4&gt;August 2011 Meeting&lt;/h4&gt;
+    &lt;p&gt;August 2011 Meeting | &lt;span class=&quot;date&quot;&gt;2011-07-17 00:00:00 UTC — 2011-12-31 00:00:00 UTC&lt;/span&gt;&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  <span>&lt;a href=&quot;#&quot;&gt;</span>
+    &lt;h4&gt;Regional Trainer Meeting&lt;/h4&gt;
+    &lt;p&gt;Regional Trainer| &lt;span class=&quot;date&quot;&gt;2011-06-06 00:00:00 UTC — 2011-06-13 00:00:00 UTC&lt;/span&gt;&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code>
     </pre>
   </section>
 
@@ -114,16 +110,14 @@
 
   <section class="slide">
     <pre>
-      <code>
-         &lt;div class=&quot;secondary-wrapper&quot;&gt;
-           &lt;section class=&quot;secondary&quot;&gt;
-             &lt;section id=&quot;products&quot;&gt;
-             &lt;/section&gt;
-             &lt;section id=&quot;workshops&quot;&gt;
-             &lt;/section&gt;
-           &lt;/section&gt;
-         &lt;/div&gt;
-      </code>
+<code><span>&lt;div class=&quot;secondary-wrapper&quot;&gt;</span>
+   &lt;section class=&quot;secondary&quot;&gt;
+     &lt;section id=&quot;products&quot;&gt;
+     &lt;/section&gt;
+     &lt;section id=&quot;workshops&quot;&gt;
+     &lt;/section&gt;
+   &lt;/section&gt;
+ &lt;/div&gt;</code>
     </pre>
   </section>
 
@@ -165,44 +159,88 @@
 
   <section class="slide">
     <pre>
-      <code>
-        &lt;section&gt;
-          &lt;header&gt;
-            &lt;h1&gt;Title&lt;/h1&gt;
-            &lt;nav&gt;
-              &lt;ul&gt;&lt;/ul&gt;
-            &lt;/nav&gt;
-          &lt;/header&gt;
-          &lt;article&gt;
-            &lt;p&gt;&lt;/p&gt;
-            &lt;aside&gt;
-              &lt;p&gt;&lt;/p&gt;
-            &lt;/aside&gt;
-          &lt;/article&gt;
-          &lt;footer&gt;
-            &lt;time&gt;
-          &lt;/footer&gt;
-        &lt;/section&gt;
-      </code>
+<code>&lt;section&gt;
+  &lt;header&gt;
+
+    &lt;hgroup&gt;
+      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;h2&gt;Subtitle&lt;/h1&gt;
+    &lt;/hgroup&gt;
+
+    &lt;nav&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;article&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;aside&gt;
+      &lt;p&gt;&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/article&gt;
+
+  &lt;footer&gt;
+    &lt;time&gt;&lt;/time&gt;
+  &lt;/footer&gt;
+&lt;/section&gt;</code>
     </pre>
   </section>
 
   <!--workshop for marking up text-->
   <!--markup gettysburg address-->
 
-  <section class="slide">
+  <section class="slide title">
     <h1>Forms</h1>
-    <p>Mimic js funtionality that&rsquo;s become design patterns online</p>
   </section>
 
   <section class="slide">
     <h2>New input types</h2>
-    <ul>
-      <li><a href="http://diveintohtml5.org/examples/input-type-email.html">email</a></li>
-      <li><a href="http://diveintohtml5.org/examples/input-type-url.html">url</a></li>
-      <li><a href="http://diveintohtml5.org/examples/input-type-range.html">range</a></li>
-      <li><a href="http://diveintohtml5.org/examples/input-type-search.html">search</a></li>
-    </ul>
+    <p>email, url, search, range, number, date, color,</p>
+  </section>
+
+  <section class="slide">
+    <h2>Email</h2>
+    <pre>
+<code>&lt;form&gt;
+  &lt;input name=&quot;addr&quot; type=&quot;email&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Go&quot;&gt;
+&lt;/form&gt;</code>
+    </pre>
+
+    <form>
+      <input name="addr" type="email">
+      <input type="submit" value="Go">
+    </form>
+  </section>
+
+  <section class="slide">
+    <h2>url</h2>
+    <pre>
+<code>&lt;form&gt;
+  &lt;input name=&quot;addr&quot; type=&quot;url&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Go&quot;&gt;
+&lt;/form&gt;</code>
+    </pre>
+
+    <form>
+      <input name="addr" type="url">
+      <input type="submit" value="Go">
+    </form>
+  </section>
+
+  <section class="slide">
+    <h2>search</h2>
+    <pre>
+<code>&lt;form&gt;
+  &lt;input name=&quot;addr&quot; type=&quot;search&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Go&quot;&gt;
+&lt;/form&gt;</code>
+    </pre>
+
+    <form>
+      <input name="addr" type="search">
+      <input type="submit" value="Go">
+    </form>
   </section>
 
   <section class="slide">
@@ -249,12 +287,10 @@
   <section class="slide">
     <h2>CSS <a href="http://code.google.com/p/html5resetcss/">Reset</a></h2>
     <pre>
-    <code class="slide">
-      article,aside,details,figcaption,figure,
-      footer,header,hgroup,menu,nav,section {
-        display:block;
-      }
-    </code>
+<code>article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}</code>
     </pre>
   </section>
 
@@ -262,11 +298,9 @@
     <h2><a href="http://code.google.com/p/html5shiv/">HTML 5 Shiv</a> &amp; <a href="http://www.modernizr.com/">Modernizer</a></h2>
     <p>What are they and which one should I use when?</p>
     <pre>
-      <code>
-      <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-      </code>
+<code>&lt;!--[if lt IE 9]&gt;
+        &lt;script src=&quot;//html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+      &lt;![endif]--&gt;</code>
     </pre>
   </section>
 
@@ -281,19 +315,14 @@
     <p class="slide">Naming: Describe what the content is not how it looks. Don&rsquo;t repeat names.</p>
   </section>
 
-
     <section class="slide">
-    <h2>Don&rsquo;t</h2>
     <pre>
-      <code>
-&lt;div id=&quot;wrapper&quot; class=&quot;wrapper-with-black-background&quot;&gt;
-
+<code>&lt;div id=&quot;wrapper&quot; class=&quot;wrapper-with-black-background&quot;&gt;
   &lt;div class=&quot;inner-wrapper&quot;&gt;
     &lt;div class=&quot;top-content&quot;&gt;
       &lt;h1 id=&quot;logo&quot;&gt;LOGO&lt;/h1&gt;
       &lt;p class=&quot;tagline&quot;&gt;TAGLINE&lt;/p&gt;
     &lt;/div&gt;
-
     &lt;div class=&quot;side-content&quot;&gt;
       &lt;ul id=&quot;main-navigation-list&quot;&gt;
         &lt;li class=&quot;list-item-first&quot;&gt;
@@ -305,29 +334,77 @@
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
   &lt;div id=&quot;outer-wrapper&quot;&gt;
     &lt;h2 id=&quot;outerWrapperHeader helvetica&quot;&gt;&lt;/h2&gt;
     &lt;h3 id=&quot;outerWrapperSubheader&quot;&gt;&lt;/h3&gt;
   &lt;/div&gt;
+&lt;/div&gt;</code>
+    </pre>
+  </section>
 
-&lt;/div&gt;
-      </code>
+    <section class="slide">
+    <pre>
+<code>&lt;div <span>id=&quot;wrapper&quot;</span> class=&quot;wrapper-with-black-background&quot;&gt;
+  &lt;div class=&quot;inner-wrapper&quot;&gt;
+    &lt;div class=&quot;top-content&quot;&gt;
+      &lt;h1 id=&quot;logo&quot;&gt;LOGO&lt;/h1&gt;
+      &lt;p class=&quot;tagline&quot;&gt;TAGLINE&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side-content&quot;&gt;
+      &lt;ul <span>id=&quot;main-navigation-list&quot;</span>&gt;
+        &lt;li class=&quot;list-item-first&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;LINK&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-item-green&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;LINK&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div <span>id=&quot;outer-wrapper&quot;</span>&gt;
+    &lt;h2 id=&quot;outerWrapperHeader helvetica&quot;&gt;&lt;/h2&gt;
+    &lt;h3 id=&quot;outerWrapperSubheader&quot;&gt;&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
     </pre>
   </section>
 
   <section class="slide">
-    <h2>Do</h2>
     <pre>
-      <code>
-        &lt;section&gt;
+<code>&lt;div id=&quot;wrapper&quot; class=&quot;wrapper-with-black-background&quot;&gt;
+  &lt;div class=&quot;inner-wrapper&quot;&gt;
+    &lt;div class=&quot;top-content&quot;&gt;
+      &lt;h1 id=&quot;logo&quot;&gt;LOGO&lt;/h1&gt;
+      &lt;p class=&quot;tagline&quot;&gt;TAGLINE&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side-content&quot;&gt;
+      &lt;ul id=&quot;main-navigation-list&quot;&gt;
+        &lt;li class=&quot;list-item-first&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;LINK&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li <span>class=&quot;list-item-green&quot;</span>&gt;
+          &lt;a href=&quot;#&quot;&gt;LINK&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;outer-wrapper&quot;&gt;
+    &lt;h2 id=&quot;outerWrapperHeader <span>helvetica</span>&quot;&gt;&lt;/h2&gt;
+    &lt;h3 id=&quot;outerWrapperSubheader&quot;&gt;&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+    </pre>
+  </section>
 
+
+  <section class="slide">
+    <pre>
+<code>&lt;section&gt;
   &lt;header class=&quot;main&quot;&gt;
     &lt;hgroup&gt;
       &lt;h1&gt;LOGO&lt;/h1&gt;
       &lt;p&gt;TAGLINE&lt;/p&gt;
     &lt;/hgroup&gt;
-
     &lt;nav&gt;
       &lt;ul&gt;
         &lt;li class=&quot;about&quot;&gt;
@@ -339,16 +416,13 @@
       &lt;/ul&gt;
     &lt;/nav&gt;
   &lt;/header&gt;
-
   &lt;section class=&quot;secondary&quot;&gt;
     &lt;header&gt;
       &lt;h1&gt;&lt;/h1&gt;
       &lt;h2&gt;&lt;/h2&gt;
     &lt;/header&gt;
   &lt;/section&gt;
-
-&lt;/section&gt;
-      </code>
+&lt;/section&gt;</code>
     </pre>
     </section>
 
@@ -364,14 +438,12 @@
     <p>Installing, and watching</p>
 
     <pre class="slide">
-    <code>
-      gem install sass
-      sass --watch sass_folder
-    </code>
+<code>gem install sass
+sass --watch sass_folder</code>
     </pre>
 
     <pre class="slide">
-      <code>sass --watch app/sass:public/stylesheets</code>
+<code>sass --watch app/sass:public/stylesheets</code>
     </pre>
   </section>
 
@@ -380,168 +452,170 @@
   <section class="slide">
     <h2>Nesting</h2>
     <p>Nest selectors within their parents</p>
-    <pre class="slide">
-      <code>
-        ul {
-          margin: 2em 0;
-        }
+  </section>
 
-        ul li a {
-          color: blue;
-        }
+  <section class="slide">
+    <pre>
+<code>ul {
+  margin: 2em 0;
+}
 
-        ul li a:hover {
-          color: red;
-        }
+ul li a {
+  color: blue;
+}
 
-        ul li a span{
-          text-align: right;
-        }
-      </code>
+ul li a:hover {
+  color: red;
+}
 
-      <code class="slide">
-        ul {
-          margin: 2em 0;
+ul li a span{
+  text-align: right;
+}</code>
+    </pre>
+  </section>
 
-          a {
-            color: blue;
+  <section class="slide">
+    <pre>
+<code>ul {
+  margin: 2em 0;
 
-            &:hover {
-              color: red;
-            }
+  a {
+    color: blue;
 
-            span {
-              text-align: right;
-            }
-          }
-        }
-      </code>
+    &:hover {
+      color: red;
+    }
+
+    span {
+      text-align: right;
+    }
+  }
+}</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>Variables</h2>
     <p>Use the same color, same size, same fonts?</p>
-    <pre>
-      <code>
-        $red: #AD141E;
-        $body-font: "skolar-1","skolar-2", Georgia, serif;
+    <pre><code>$red: #AD141E;
+$body-font: "skolar-1","skolar-2", Georgia, serif;
 
-        ul {
-          li {
-            font: 14px $body-font;
-            color: $red;
-          }
-        }
-      </code>
+ul {
+  li {
+    font: 14px $body-font;
+    color: $red;
+  }
+}</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>Mixins</h2>
     <p>Mixins allow you to re-use whole chunks of CSS, properties or selectors. You can even pass variables through them.</p>
-    <pre>
-      <code class="slide">
-      @mixin border-radius ($radii) {
-  -webkit-border-radius: $radii;
-     -moz-border-radius: $radii;
-      -ms-border-radius: $radii;
-       -o-border-radius: $radii;
-          border-radius: $radii;
-      }
-      </code>
-
-      <code class="slide">
-        section {
-          color: #000;
-          <span>@inculde border-radius(3px);</span>
-        }
-      </code>
-    </pre>
   </section>
+
+<section class="slide">
+  <pre>
+<code>@mixin border-radius ($radii) {
+  -webkit-border-radius: $radii;
+  -moz-border-radius: $radii;
+  -ms-border-radius: $radii;
+  -o-border-radius: $radii;
+  border-radius: $radii;
+}</code>
+
+<code class="slide">section {
+  color: #000;
+  <span>@inculde border-radius(3px);</span>
+}</code>
+    </pre>
+</section>
 
   <section class="slide">
     <h2>Inheritance</h2>
     <p>Apply styles to selectors without adding more classs or IDs</p>
+  </section>
+
+  <section class="slide">
     <pre>
-      <code class="slide">
-        .clearfix:before, .clearfix:after {
-          content: "\0020";
-          display: block;
-          height: 0;
-          visibility: hidden; }
+<code>.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
 
-        .clearfix:after {
-          clear: both; }
+.clearfix:after {
+  clear: both; }
 
-        .clearfix {
-          zoom: 1; }
-      </code>
+.clearfix {
+  zoom: 1; }</code>
 
-      <code class="slide">
-      section {
-        color: #000;
-        @include border-radius(3px);
-        <span>@extend .clearfix;</span>
-      }
-      </code>
+<code class="slide">
+section {
+  color: #000;
+  @include border-radius(3px);
+  <span>@extend .clearfix;</span>
+}</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>Referencing Parent Selectors</h2>
     <p>Use &amp; to reference parent selectors.</p>
+  </section>
 
+  <section class="slide">
     <pre>
-      <code class="slide">
-        a {
-         font-weight: bold;
-         text-decoration: none;
+<code>a {
+   font-weight: bold;
+   text-decoration: none;
 
-         <span>&amp;:hover</span> { text-decoration: underline; }
+   <span>&amp;:hover</span> { text-decoration: underline; }
 
-         <span>body.firefox &amp;</span> { font-weight: normal; }
-       }
-      </code>
+   <span>body.firefox &amp;</span> { font-weight: normal; }
+ }</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">Operations</a></h2>
     <p>Preform basic math operations in your css and sass will parse it.</p>
-    <pre>
-      <code>+, -, *, /</code>
-      <code class="slide">
-        width: 45px+3px;
-        height: 10em*3em;
-        font-size: $base-font-size/2;
-      </code>
-    </pre>
   </section>
+
+  <section class="slide">
+    <pre>
+<code>+, -, *, /</code>
+<code>
+width: 45px+3px;
+height: 10em*3em;
+font-size: $base-font-size/2;
+</code>
+      </pre>
+    </section>
 
   <section class="slide">
     <h2>Color Operations</h2>
     <p>Effect the colors hue, lightness, darkness, and alpha/hue</p>
+  </section>
+
+  <section class="slide">
     <pre>
-      <code>
-        lighten
-        darken
-        desaturate
-        saturate
+<code>lighten
+darken
+desaturate
+saturate
 
-        color: lighten(#000, 10%);
-        background-color: darken($primary-color, 10%);
-      </code>
-      <code>
-        rgba
-        hsla
-        opacify
-        transparentize
+color: lighten(#000, 10%);
+background-color: darken($primary-color, 10%);</code>
 
-        color: rgba(#000, .3);
-        background-color: hsla($primary-color, .3);
-        border-color: opacify(#000, .3);
-      </code>
+<code>rgba
+hsla
+opacify
+transparentize
+
+color: rgba(#000, .3);
+background-color: hsla($primary-color, .3);
+border-color: opacify(#000, .3);</code>
     </pre>
   </section>
 
@@ -549,19 +623,22 @@
     <h2>@if, @for, @each and custom functions</h2>
     <p>Sass comes prepackaged with a bunch of funtions built in and since Sass 3.1 we can create our own.</p>
 
+  </section>
+
+  <section class="slide">
     <pre>
-      <code>
-    @if lightness($primary_color) &lt; 70% {
-      background: lighten($background_color, 20%);
-    } @else /*if the primary color is light*/{
-      background: darken($background_color, 10%);
-    }
-      </code>
-      <code class="slide">
-        @function grid-width($n) {
-          @return $n * $gw-column + ($n - 1) * $gw-gutter;
-        }
-      </code>
+<code>
+@if lightness($primary_color) &lt; 70% {
+background: lighten($background_color, 20%);
+} @else /*if the primary color is light*/{
+background: darken($background_color, 10%);
+}
+</code>
+<code class="slide">
+  @function grid-width($n) {
+    @return $n * $gw-column + ($n - 1) * $gw-gutter;
+  }
+</code>
     </pre>
   </section>
 
@@ -569,18 +646,16 @@
     <h2>Partials</h2>
     <p>Split all your files up and Sass will join them together when it parses your code.</p>
 
-    <pre>
-      <code class="slide">
-        _community.scsss
-        _contact.scss
-        _index.scss
-      </code>
+  </section>
 
-      <code class="slide">
-        @include "community";
-        @include "contact";
-        @include "index";
-      </code>
+  <section class="slide">
+    <pre><code>_community.scsss
+_contact.scss
+_index.scss</code>
+
+<code class="slide">@include "community";
+@include "contact";
+@include "index";</code>
     </pre>
   </section>
 
@@ -593,65 +668,53 @@
   <section class="slide">
     <h2>application.scss</h2>
     <pre>
-      <code>
-        @import "flutie/flutie";
-        @import "bourbon/bourbon";
+<code>@import "flutie/flutie";
+@import "bourbon/bourbon";
 
-        @import "sass-variables";
-        @import "sass-extends";
-        @import "base";
-        @import "layout";
-        @import --views--;
-      </code>
+@import "sass-variables";
+@import "sass-extends";
+@import "base";
+@import "layout";
+@import --views--;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>Reflect the structure of you&rsquo;re app/site</h2>
     <pre>
-      <code>
-        |+about/
-        |+assets/
-        |+images/
-        |+javascripts/
-        |+jobs/
-        |+projects/
-        |+services/
-        |+stylesheets/
-        |-about.html
-        |-community.html
-        |-contact.html
-        |-index.html
-      </code>
-
-      <code>
-        @import "header";
-        @import "footer";
-        @import "index";
-        @import "community";
-        @import "contact";
-        @import "about";
-        @import "jobs";
-      </code>
+<code>|+about/
+|+assets/
+|+images/
+|+javascripts/
+|+jobs/
+|+projects/
+|+services/
+|+stylesheets/
+|-about.html -&gt; @import "about";
+|-community.html -&gt; @import "community";
+|-contact.html -&gt; @import "contact";
+|-index.html -&gt; @import "index";
+</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>_sass-variables.scss</h2>
     <p>All variables for sass should be in this file. Make variables for fonts, colors, units, basic styles and more.</p>
+  </section>
+
+  <section class="slide">
     <pre>
-      <code>
-        /* Variables
-        ---------------------------------------- */
-        $header: proxima-nova-1, proxima-nova-2, "Helvetica Neue", Helvetica, sans-serif;
-        $body: "skolar-1","skolar-2", Georgia, serif;
+<code>/* Variables
+---------------------------------------- */
+$header: proxima-nova-1, proxima-nova-2, "Helvetica Neue", Helvetica, sans-serif;
+$body: "skolar-1","skolar-2", Georgia, serif;
 
-        $red: #AD141E; /*thoughtbot red*/
+$red: #AD141E; /*thoughtbot red*/
 
-        $lh: 20px; /*line-height of all the type on the site*/
-        $unit: 60px; /*one grid column*/
-        $gutter: 25px; /*size of one gutter*/
-      </code>
+$lh: 20px; /*line-height of all the type on the site*/
+$unit: 60px; /*one grid column*/
+$gutter: 25px; /*size of one gutter*/</code>
     </pre>
   </section>
 
@@ -665,7 +728,7 @@
     <p>For your basic HTML styles</p>
   </section>
 
-  <section>
+  <section class="slide">
     <h2>Top to bottom</h2>
     <p>When ordering selectors, order them from the top to the bottom of the DOM. DON&rsquo;T JUST ADD THEM TO THE BOTTOM.</p>
   </section>
@@ -674,42 +737,41 @@
     <h2>Alphabetic order</h2>
     <p>Have a consistent system when ordering CSS declarations, we use alphabetic.</p>
     <pre>
-      <code>
-        p {
-          border-left:5px solid #ccc;
-          color:#000;
-          font-size:2em;
-          font-style:italic;
-          padding:1em 2em;
-        }
-      </code>
+<code>p {
+  border-left:5px solid #ccc;
+  color:#000;
+  font-size:2em;
+  font-style:italic;
+  padding:1em 2em;
+}</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>Scss Spacing</h2>
     <p>One line always above a new selector selector and a space between attribute and value.</p>
+  </section>
+
+  <section class="slide">
     <pre>
-      <code>
-  blockquote {
-    font-size: 2em;
-    font-style: italic;
-    padding: 1em 2em;
-    color: #000;
-    border-left: 5px solid #ccc;
+<code>blockquote {
+  font-size: 2em;
+  font-style: italic;
+  padding: 1em 2em;
+  color: #000;
+  border-left: 5px solid #ccc;
 
-    p {
-      margin: 0;
-    }
-
-    cite {
-      font-size: .5em;
-      font-style: normal;
-      font-weight: bold;
-      color: #888;
-    }
+  p {
+    margin: 0;
   }
-      </code>
+
+  cite {
+    font-size: .5em;
+    font-style: normal;
+    font-weight: bold;
+    color: #888;
+  }
+}</code>
     </pre>
   </section>
 
@@ -718,11 +780,9 @@
     <p>It gives new developers an idea of the structure of the DOM without having to look at the HTML</p>
 
     <pre>
-      <code>
-        section.class {}
-        p.class {}
-        h3.class {}
-      </code>
+<code>section.class {}
+p.class {}
+h3.class {}</code>
     </pre>
   </section>
 
@@ -742,54 +802,49 @@
     <h1>General approch: progressive enhancement</h1>
   </section>
 
-  <section class="slide title">
-    <h2>New attributes</h2>
-  </section>
-
   <section class="slide">
     <h2><code>background</code></h2>
     <p>Multiple images now parsed with comma seperator.</p>
 
-    <pre>
-      <code>background: url('logo.png') 0 0 no-repeat, url('background.png') 0 0 repeat-x, #fff url('last-background.png') 0 0 repeat;</code>
+    <pre><code>background: url('logo.png') 0 0 no-repeat, url('background.png') 0 0 repeat-x, #fff url('last-background.png') 0 0 repeat;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>text-shadow</code></h2>
-    <pre>
-      <code class="slide">text-shadow: h-shadow v-shadow blur spread color;</code>
-      <code class="slide">text-shadow: 0 1px 0 #fff;</code>
+
+    <pre><code>text-shadow: h-shadow v-shadow blur spread color;</code>
+
+<code class="slide">text-shadow: 0 1px 0 #fff;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>border-radius</code></h2>
     <pre>
-      <code class="slide">border-radius: top-left top-right bottom-right bottom-left;</code>
-      <code class="slide">
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -o-border-radius: 3px;
-        -ms-border-radius: 3px;
-        border-radius: 3px;
-      </code>
-      <code class="slide">@include border-radius(3);</code>
+<code>border-radius: top-left top-right bottom-right bottom-left;</code>
+
+<code class="slide">-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-o-border-radius: 3px;
+-ms-border-radius: 3px;
+border-radius: 3px;</code>
+<code class="slide">@include border-radius(3);</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>box-shadow</code></h2>
     <pre>
-      <code class="slide">box-shadow: h-shadow v-shadow blur spread color inset;</code>
-      <code class="slide">
-        -webkit-box-shadow: 0 1px 0 #fff;
-        -moz-box-shadow: 0 1px 0 #fff;
-        -o-box-shadow: 0 1px 0 #fff;
-        -ms-box-shadow: 0 1px 0 #fff;
-        box-shadow: 0 1px 0 #fff;
-      </code>
-      <code class="slide">@include box-shadow(0 1px 0 #fff);</code>
+<code>box-shadow: h-shadow v-shadow blur spread color inset;</code>
+
+<code class="slide">-webkit-box-shadow: 0 1px 0 #fff;
+-moz-box-shadow: 0 1px 0 #fff;
+-o-box-shadow: 0 1px 0 #fff;
+-ms-box-shadow: 0 1px 0 #fff;
+box-shadow: 0 1px 0 #fff;</code>
+
+<code class="slide">@include box-shadow(0 1px 0 #fff);</code>
     </pre>
   </section>
 
@@ -798,46 +853,39 @@
   <section class="slide">
     <h2><code>transform</code></h2>
     <pre>
-      <code>
-        transform: translate(3em,0); //moves the element 3em to the right
-        transform: scale(2); //makes the element bigger 200%
-        transform: rotate(15deg); //rotates element 15 degrees
-      </code>
+<code>transform: translate(3em,0); //moves the element 3em to the right
+transform: scale(2); //makes the element bigger 200%
+transform: rotate(15deg); //rotates element 15 degrees</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>transition</code></h2>
     <pre>
-      <code>
-        transition: attribute time easing;
-      </code>
+<code>transition: attribute time easing;</code>
 
-      <code>
-        transition: width .2s;
-        transition: all .3s ease-in-out;
-      </code>
+<code class="slide">transition: width .2s;
+transition: all .3s ease-in-out;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>animation</code></h2>
     <p>Keyframe animations with CSS</p>
-    <pre>
-      <code class="slide">
-        animation-name: spinnerRotate;
-        animation-duration: 2s;
-      </code>
-      <code class="slide">
-        @keyframes spinnerRotate {
-          from {
-            transform:rotate(0deg);
-          }
-          to {
-            transform:rotate(360deg);
-          }
-        }
-      </code>
+  </section>
+
+  <section class="slide">
+    <pre><code>animation-name: spinnerRotate;
+  animation-duration: 2s;
+</code>
+<code class="slide">@keyframes spinnerRotate {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}</code>
     </pre>
   </section>
 
@@ -846,30 +894,25 @@
   <section class="slide">
     <h2><code>linear-gradient</code></h2>
     <pre>
-      <code class="slide">
-        @include linear-gradient(top color, bottom color);
-      </code>
-      <code class="slide">
-        @include linear-gradient(#1e5799, #2989d8);
-      </code>
+<code>@include linear-gradient(top color, bottom color);</code>
+
+<code class="slide">@include linear-gradient(#1e5799, #2989d8);</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>radial-gradient</code></h2>
     <pre>
-      <code class="slide">
-        @include radial-gradient(position angle, shape size, start color, stop color);
-      </code>
-      <code class="slide">
-        @include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
-      </code>
+<code>@include radial-gradient(position angle, shape size, start color, stop color);
+</code>
+<code class="slide">@include radial-gradient(50% 50%, circle cover, #1e5799, #efefef);
+</code>
     </pre>
   </section>
 
 
   <section class="slide title">
-    <h2>New selectors</h2>
+    <h1>New selectors</h2>
   </section>
 
   <section class="slide">
@@ -877,65 +920,61 @@
     <p>an E element, first child of its parent</p>
 
     <pre>
-      <code>
-        &lt;ol&gt;
-          <span>&lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;</span>
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-        &lt;/ol&gt;
+<code>&lt;ol&gt;
+  <span>&lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;</span>
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
       </code>
     </pre>
   </section>
 
   <section class="slide">
-    <h2><code>:last-child</code></h2>
+    <h2><code>E:last-child</code></h2>
     <p>an E element, last child of its parent</p>
 
     <pre>
-      <code>
-        &lt;ol&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          <span>&lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;</span>
-        &lt;/ol&gt;
+<code>&lt;ol&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  <span>&lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;</span>
+&lt;/ol&gt;
       </code>
     </pre>
   </section>
 
   <section class="slide">
-    <h2><code>:nth-child()</code></h2>
+    <h2><code>E:nth-child()</code></h2>
     <p>an E element, the n-th child of its parent</p>
 
     <pre>
-      <code>
-        &lt;ol&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-        &lt;/ol&gt;
+<code>&lt;ol&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
       </code>
     </pre>
   </section>
 
   <section class="slide">
-    <h2><code>:nth-last-child(n)</code></h2>
+    <h2><code>E:nth-last-child(n)</code></h2>
     <p>an E element, the n-th child of its parent, counting from the last one</p>
 
     <pre>
-      <code>
-        &lt;ol&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-        &lt;/ol&gt;
+<code>&lt;ol&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
       </code>
     </pre>
   </section>
@@ -959,17 +998,17 @@
 
   <section class="slide">
     <h2><code>E:not</code></h2>
+    <p>not E</p>
 
     <pre>
-      <code>
-        &lt;ol&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
-        &lt;/ol&gt;
-      </code>
+<code>&lt;ol&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;TEXT&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</code>
     </pre>
   </section>
 
@@ -981,16 +1020,15 @@
     <h2><code>grid-width</code></h2>
     <p>Simple way to keep track the width </p>
     <pre>
-      <code class="slide">
-        # The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
-        $gw-column: 100px;          // Column Width
-        $gw-gutter: 40px;           // Gutter Width
+<code class="slide"># The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
+$gw-column: 100px;          // Column Width
+$gw-gutter: 40px;           // Gutter Width
 
-        div {
-          width: grid-width(4);     // returns 520px;
-          margin-left: $gw-gutter;  // returns 40px;
-        }
-      </code>
+div {
+  width: grid-width(4);     // returns 520px;
+  margin-left: $gw-gutter;  // returns 40px;
+}
+</code>
     </pre>
   </section>
 
@@ -999,20 +1037,21 @@
     <p>Calulates golden ratio based on value.</p>
 
     <pre>
-      <code>
-        golden-ratio(14px,  1);    // returns: 22.652px
-        golden-ratio(14px,  2);    // returns: 45.304px
-        golden-ratio(14px, -1);    // returns: 8.653px
-      </code>
+<code>golden-ratio(14px,  1);    // returns: 22.652px
+golden-ratio(14px,  2);    // returns: 45.304px
+golden-ratio(14px, -1);    // returns: 8.653px
+</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2><code>display: inline-block;</code></h2>
     <p>Element is placed inline but behaves as block</p>
+
     <pre>
-      <code class="slide">box-shadow: h-shadow v-shadow blur spread color inset;</code>
-      <code class="slide">@include inline-block;</code>
+<code class="slide">box-shadow: h-shadow v-shadow blur spread color inset;</code>
+
+<code class="slide">@include inline-block;</code>
     </pre>
   </section>
 
@@ -1025,15 +1064,13 @@
     <h2><code>flex-box</code></h2>
 
     <pre>
-      <code>
-display: box;
+<code>display: box;
 box-orient: horizontal | vertical | inherit;
 box-pack: start | end | center | justify;
 box-align start | end | center | baseline | stretch;
-      </code>
+</code>
     </pre>
   </section>
-
 
   <section class="slide title">
     <h2>Responsive and fluid layout</h2>
@@ -1042,6 +1079,16 @@ box-align start | end | center | baseline | stretch;
   <section class="slide">
     <h2>Making grid width fluid</h2>
     <p>Involves a bunch of math but that becomes easier if you are using Sass.</p>
+
+    <pre>
+<code>target ÷ context = result</code>
+
+<code>max-width: 960px;
+$gw-gutter: .020833333% //20 ÷ 960px
+$gw-column: .0625% //60 ÷ 960</code>
+
+<code>img {width: 100%}</code>
+    </pre>
   </section>
 
   <section class="slide">
@@ -1049,7 +1096,19 @@ box-align start | end | center | baseline | stretch;
     <p>Select size and type of output for your design</p>
 
     <pre>
-      
+<code>@media screen | print | tv | projection | all | handheld {
+  //media specific styles
+}
+</code>
+
+<code>@media screen and (max-device-width: 480px) {
+  //iPhone styles
+}
+
+@media screen and (min-width: 800) and (max-width: 1200) {
+  //iPhone styles
+}
+</code>
     </pre>
   </section>
 

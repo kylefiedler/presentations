@@ -15,14 +15,20 @@ body.deck-container {
   font-size:1.25em;
   background:#fff;
   width: 100%;
+  height: 100%;
   margin: 0;
 
-  .slide {
+  section.slide {
     background:#fff;
+    width: 80%;
+    vertical-align: center;
+    padding: 5% 10%;
 
     &.title {
       background: $dominant-color;
       color: #fff;
+      padding: 0;
+      width: 100%;
 
       h1 {
         color: $secondary-color;
@@ -36,7 +42,8 @@ body.deck-container {
   }
 
   h2 {
-    color: $dominant-color;
+    color: $highlight-color;
+    border-bottom: 0;
   }
 
   h3 {
@@ -44,10 +51,11 @@ body.deck-container {
   }
 
   pre {
-    border-color:#ccc;
   }
 
   code {
+
+    font-family: "Anonymous Pro";
     color: $dominant-color;
 
     span {
