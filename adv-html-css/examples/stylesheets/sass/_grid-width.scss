@@ -1,0 +1,33 @@
+$gw-gutter: 20px;
+$gw-column: 300px;
+
+body {
+  text-align: center;
+  background: #efefef;
+
+  section {
+    width: 940px;
+    margin: 0 auto;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        @include border-radius(3px);
+        @include box-shadow(0 1px 3px #999, inset 0 0 0 3px #fff);
+        background: #ddd;
+        height: grid-width(1);
+        margin: $gw-gutter $gw-gutter 0 0;
+        width: grid-width(1);
+
+        float: left;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
