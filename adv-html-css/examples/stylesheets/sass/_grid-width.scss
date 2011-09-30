@@ -6,7 +6,7 @@ body {
   background: #efefef;
 
   section {
-    width: 940px;
+    width: grid-width(4);
     margin: 0 auto;
 
     ul {
@@ -20,11 +20,12 @@ body {
         background: #ddd;
         height: grid-width(1);
         margin: $gw-gutter $gw-gutter 0 0;
-        width: grid-width(1);
+        width: grid-width(2)-2px;
+        border: 1px solid #000;
 
         float: left;
 
-        &:nth-child(3n) {
+        &:nth-child(2n) {
           margin-right: 0;
         }
       }

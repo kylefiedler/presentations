@@ -1,0 +1,72 @@
+@import "bourbon/bourbon";
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+
+body {
+  text-align: center;
+  background: #efefef;
+
+  section.main {
+    width: 940px;
+    margin: 0 auto;
+
+    section.box {
+      width: 500px;
+      height: 500px;
+      padding: 50px;
+      //box-sizing: border-box;
+            background: #999;
+
+      div {
+        width: 400px;
+        height: 400px;
+        margin: 15px;
+        padding: 15px;
+        background: #666;
+        border: 10px solid #000;
+        @include box-sizing(border-box);
+
+        p {
+          margin: 0;
+          background: #333;
+          /*width: 400px;*/
+          /*height: 400px;*/
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      @extend .clearfix;
+
+      li {
+        @include border-radius(3px);
+        @include box-shadow(0 1px 3px #999, inset 0 0 0 3px #fff);
+        background: #ddd;
+        height: 100px;
+        margin: 20px 20px 0 0;
+        width: 100px;
+
+        float: left;
+
+        &:nth-child(3n) {
+          clear: both;
+        }
+      }
+    }
+  }
+}
+

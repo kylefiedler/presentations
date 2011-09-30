@@ -1,0 +1,19 @@
+@import "bourbon/bourbon";
+
+
+body {
+  text-align: center;
+  background: #efefef;
+
+  section.main {
+    width: 640px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      @include box-shadow(inset 0 0 0 4px);
+    }
+
+       }
+}
+

@@ -7,26 +7,24 @@ body {
 
   section {
     width: 940px;
+    height: 600px;
     margin: 0 auto;
-    @include box-orient(horizontal);
-    @include box-pack(start);
-    @include box-align(stretch);
 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      @include box();
 
       li {
         @include border-radius(3px);
         @include box-shadow(0 1px 3px #999, inset 0 0 0 3px #fff);
         background: #ddd;
-        height: grid-width(1);
         margin: $gw-gutter $gw-gutter 0 0;
         @include box-flex(1);
 
         &:nth-child(3n) {
-          margin-right: 0;
+          @include box-flex(3);
         }
       }
     }
